@@ -6,10 +6,14 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 export default function ActionCard(props) {
   const { home, overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <Flex
       gap="0"
@@ -139,6 +143,9 @@ export default function ActionCard(props) {
           isDisabled={false}
           variation="primary"
           children="Primary Button"
+          onClick={() => {
+            buttonOnClick();
+          }}
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>

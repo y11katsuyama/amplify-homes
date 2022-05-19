@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Divider, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function Ampligram(props) {
-  const { overrides, ...rest } = props;
+  const { home, overrides, ...rest } = props;
   return (
     <Flex
       gap="8px"
@@ -124,6 +124,7 @@ export default function Ampligram(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
+        src={home?.image_url}
         {...getOverrideProps(overrides, "image29766769")}
       ></Image>
       <Flex

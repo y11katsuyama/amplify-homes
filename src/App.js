@@ -2,6 +2,7 @@ import './App.css';
 import { 
   NavBar,ActionCardCollection,MarketingFooter
 } from './ui-components';
+import { withAuthenticator } from '@aws-amplify/ui-react'; // 認証に必要
 
 function App() {
   return (
