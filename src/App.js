@@ -14,4 +14,5 @@ function App() {
   );
 }
 
-export default App;
+//export default App;
+export default withAuthenticator(App); // 認証に必要
