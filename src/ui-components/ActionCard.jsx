@@ -8,11 +8,20 @@
 import React from "react";
 import {
   getOverrideProps,
+  useDataStoreUpdateAction,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
+import { Home } from "../models";
+import { schema } from "../models/schema";
 import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 export default function ActionCard(props) {
   const { home, overrides, ...rest } = props;
+  const ratingOnClick = useDataStoreUpdateAction({
+    fields: {},
+    id: home?.star,
+    model: Home,
+    schema: schema,
+  });
   const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <Flex
@@ -107,6 +116,9 @@ export default function ActionCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             size="default"
+            onClick={() => {
+              ratingOnClick();
+            }}
             {...getOverrideProps(overrides, "Rating")}
           ></Rating>
         </Flex>

@@ -18,7 +18,8 @@
             }
           ]
         }
-      }
+      },
+      "dependsOn": []
     }
   },
   "auth": {
@@ -50,6 +51,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "function": {
+    "amplifyTestFunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }

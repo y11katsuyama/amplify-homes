@@ -3,4 +3,6 @@ type Home @model @auth(rules: [{allow: public}]) {
   address: String
   image_url: String
   price: Float
+  star: Int
 }
+ 

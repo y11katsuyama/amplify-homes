@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "amplifyhomes": {}
+      },
+      "function": {
+        "amplifyTestFunc": {
+          "deploymentBucketName": "amplify-amplifyhomes-devl-74031-deployment",
+          "s3Key": "amplify-builds/amplifyTestFunc-59623035536236487253-build.zip"
+        }
       }
     }
   },

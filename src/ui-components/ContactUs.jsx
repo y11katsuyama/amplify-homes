@@ -17,7 +17,7 @@ import {
   View,
 } from "@aws-amplify/ui-react";
 export default function ContactUs(props) {
-  const { overrides, ...rest } = props;
+  const { test, overrides, ...rest } = props;
   return (
     <Flex
       gap="24px"

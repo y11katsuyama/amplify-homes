@@ -13,6 +13,7 @@ export declare class Home {
   readonly address?: string | null;
   readonly image_url?: string | null;
   readonly price?: number | null;
+  readonly star?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Home, HomeMetaData>);
